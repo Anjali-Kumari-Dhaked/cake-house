@@ -30,6 +30,13 @@ export class SummaryComponent implements OnInit {
   
 
   ngOnInit(): void {
-  }
 
+  }
+placeorder(){
+  
+  this.route.navigate(['/checkout/address']);
+  this.cs.address=true;
+  this.cs.summary=true;
+  
+}
 }

@@ -1,8 +1,22 @@
 <div class="grid">
 <div class="box">
   <li ><a routerLink="/checkout"> Summary</a></li>
-  <li><a [routerLink]="['address']"> Placeorder</a></li>
-  <li><a routerLink="/checkout/orderconfirm">Order Confirmation</a></li>
+  <!-- <li><a [routerLink]="['address']"> Placeorder</a></li> -->
+  <li>
+  <a *ngIf="cs.address" [routerLink]="['address']">Address</a></li>
+<div *ngIf="!cs.address">Address</div>
+
+<li>
+  <a *ngIf="cs.orderconfirm" routerLink="/checkout/orderconfirm">Order Confirmation</a></li>
+<div *ngIf="!cs.orderconfirm">Order Confirmation</div>
+
+
+
+
+
+
+
+<!-- <li><a routerLink="/checkout/orderconfirm">Order Confirmation</a></li> -->
 </div>
 <div>
     <router-outlet></router-outlet>

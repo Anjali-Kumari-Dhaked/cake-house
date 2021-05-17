@@ -13,7 +13,7 @@ export class CheckoutComponent implements OnInit {
   checkoutCart:any = [];
   totalPrice:any;
   placeorder:any={};
-  constructor(private cs:CommonService,private http:HttpClient , private router:Router) {
+  constructor(public cs:CommonService,private http:HttpClient , private router:Router) {
     // this.order();
    
    }

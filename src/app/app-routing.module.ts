@@ -15,6 +15,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
 import { OrderconfirmComponent } from './orderconfirm/orderconfirm.component';
+import { CommonService } from 'cake-house/src/app/common.service';
 // import { AppComponent} from './app.component';
 // import { from } from 'rxjs';
 // import { CakedetailsComponent } from './cakedetails/cakedetails.component';
@@ -22,19 +23,23 @@ import { OrderconfirmComponent } from './orderconfirm/orderconfirm.component';
 const routes: Routes = [
   {path:'', component:HomeComponent},
 {path:'signup', component:SignupComponent},
-{path:'login', component:LoginComponent},
+{path:'login', component:LoginComponent,canActivate:[CommonService]},
 {path: 'forgot',component:ForgotComponent},
 {path: 'searching', component:SearchingComponent},
 {path: 'cakedetails/:cakeid', component:CakedetailsComponent},
-{path: 'add-cart' , component:AddCartComponent},
-{path: 'checkout', component: CheckoutComponent, children:[
+{path: 'add-cart' , component:AddCartComponent, canActivate:[CommonService]},
+{path: 'checkout', component: CheckoutComponent, 
+canActivate:[CommonService],
+children:[
   {path:"", component:SummaryComponent},
   { path:"address", component:AddressComponent},
   {path:"orderconfirm", component:OrderconfirmComponent}
 ]},
-{path:'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
+{path:'admin',
+canActivate:[CommonService],
+ loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
 // {path:'editdetails/:cakeid', component:EditdetailsComponent},
-{path:'myorder', component:MyorderComponent}
+{path:'myorder', component:MyorderComponent, canActivate:[CommonService]}
 
 ];
 

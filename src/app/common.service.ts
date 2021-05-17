@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router , CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -46,9 +47,35 @@ addDetails : any =[];
 
 cakeCollection : any=[];
 checkoutDetails:any={};
+orderconfirm:any = false;
+summary:any=false;
+address:any=false;
+
+  constructor(private router: Router, private http: HttpClient ,private toaster:ToastrService) { }
+canActivate(
+  route:ActivatedRouteSnapshot,
+  state:RouterStateSnapshot
+): boolean{
+  console.log(route,state);
+  if(state.url==="/login"){
+    if(localStorage.user){
+      this.toaster.info("Login already");
+      this.router.navigate(['/']);
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+  if(localStorage.user){
+    return true;
+  }
+  this.toaster.info("You should login first");
+  this.router.navigate(['login']);
+  return false;
+}
 
 
-  constructor(private router: Router, private http: HttpClient) { }
  order(){
   let apiUrl = `https://apifromashu.herokuapp.com/api/cakecart`;
   this.http.post(apiUrl, {}).subscribe(

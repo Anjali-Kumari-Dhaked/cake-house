@@ -31,6 +31,7 @@ import { SummaryComponent } from './summary/summary.component';
 import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
 import { OrderconfirmComponent } from './orderconfirm/orderconfirm.component';
+import { CommonService } from './common.service';
 // import {NgxPaginationModule} from 'ngx-pagination'; 
 
 
@@ -80,7 +81,8 @@ import { OrderconfirmComponent } from './orderconfirm/orderconfirm.component';
     ToastrModule.forRoot(),
    
   ],
-  providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthinterceptService, multi:true}],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthinterceptService, multi:true},
+  CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

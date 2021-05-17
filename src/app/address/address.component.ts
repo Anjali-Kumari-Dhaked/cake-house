@@ -22,7 +22,11 @@ export class AddressComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+confirm(){
+  this.router.navigate(['/checkout/orderconfirm']);
+  this.cs.orderconfirm=true;
+  this.cs.address=true;
+}
 }
 // orderCake() {
 

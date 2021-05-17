@@ -31,8 +31,10 @@ export class OrderconfirmComponent implements OnInit {
         console.log("Order Confirm",response);
         this.toast.success("Order Successful");
         
-        
-  
+        this.cs.orderconfirm=false;
+        this.cs.summary=false;
+        this.cs.address=false;
+   this.route.navigate(["/"]);
       },
       (error:any) => {
         console.log('this is response' + error);
