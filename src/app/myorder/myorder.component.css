@@ -1,0 +1,74 @@
+.box{
+    height: auto;
+    width: 70vw;
+    margin-top: 50px;
+    margin-left: 100px ;
+    display: grid;
+    grid-template-rows: auto auto  auto ;
+  }
+  .check{
+    /* border: 1px solid red; */
+    background-color: brown;
+    display: grid;
+    grid-template-columns: 4fr .5fr;
+  }
+  .head{
+    text-align: center;
+    
+    color: white;
+  }
+  
+  .checkout-button{
+    height:40px ;
+    width: 100px;
+    margin: 10px;
+    border: 1px solid white;
+    background-color: brown;
+    color: white;
+    border-radius: 8px;
+  }
+  .checkout-button:hover{
+    background-color: rgb(230, 176, 176);
+    color: brown;
+  }
+  .t{
+    width: 100%;
+    /* border: 1px solid brown; */
+  }
+  th{
+    
+    font-size: 20px;
+  }
+  th, td {
+    padding: 15px;
+    color: brown;
+  }
+  table{
+    /* border: 1px solid brown; */
+    text-align: center;
+  }
+  tr:hover{
+    background-color: rgb(204, 156, 156);
+  }
+ .remove{
+   background-color: brown;
+   color: white;
+   border-radius: 5px;
+  
+  }
+  .remove:hover{
+    background-color: rgb(226, 177, 177);
+    color: brown;
+  }
+  .hidden{
+    display:none;
+  }
+  .image{
+    height: 100px;
+    width: 100px;
+  }
+/* .abc{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border: 1px solid brown;
+} */

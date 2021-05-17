@@ -1,0 +1,13 @@
+.image{
+    height: 5vh;
+    width: 7vw;
+}
+.button{
+    background-color: brown;
+    color: white;
+    border: 1px solid rgb(238, 165, 165);
+    height: 5vh;
+    width: 7vw;
+    border-radius: 5px;
+    
+}

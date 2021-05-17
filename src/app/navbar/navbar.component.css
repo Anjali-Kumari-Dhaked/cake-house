@@ -1,0 +1,59 @@
+
+.navbar{
+    display: grid;
+    grid-template-columns: 5fr 2fr .7fr .5fr .5fr .5fr ;
+    background-color: rgb(22, 5, 5);
+   
+    color: white;
+    height: 9vh;
+    width: 100%;
+}
+.head{
+  margin-left: 30px;
+  cursor: pointer;
+   
+}
+.form{
+  display: grid;
+  grid-template-columns: 4fr .5fr;
+}
+.search{
+   background-color: rgb(255, 227, 227);
+   border: 1px solid rgb(238, 165, 165);
+   color: brown;
+  
+   border-radius: 3px;
+   width: 96%;
+   height: 5vh;
+}
+.button{
+    background-color: brown;
+    color: white;
+    border: 1px solid rgb(238, 165, 165);
+    height: 5vh;
+    border-radius: 5px;
+    
+    
+}
+.order{
+  margin-left: 20px;
+  background-color: brown;
+  color: white;
+  border: 1px solid rgb(238, 165, 165);
+  border-radius: 5px;
+  height: 5vh;
+  width: 4vw;
+}
+/* .img{
+  height: 200px;
+  width: 250px;
+} */
+.login{
+ background-color: brown;
+ color: white;
+ border: 1px solid rgb(238, 165, 165);
+ border-radius: 5px;
+ height: 5vh;
+  width: 4vw;
+} 
+

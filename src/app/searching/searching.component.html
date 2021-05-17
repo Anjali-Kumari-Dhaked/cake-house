@@ -1,0 +1,42 @@
+<div>
+  <label for="">Min Price</label>
+  <input type="number" [(ngModel)]="min" name="min">
+  <label for="">Max Price</label>
+  <input type="number" name="max" id="" [(ngModel)]="max">
+  <button (click)="fil()" >Filter</button>
+</div>
+
+
+
+
+
+<div class ="cake--container">
+  <div  *ngFor="let eachCake of filte; let i=index" class="card"  (click)="sendID(i)">
+    <!-- <div class="veg" *ngIf="eachCake.eggless">
+      <div class="square">
+        
+        <div class="circle">
+        
+        </div>
+      </div>
+
+    </div>
+    <div class="non--veg" *ngIf="!eachCake.eggless">
+      <div class="square--nonveg">
+        
+        <div class="circle--nonveg">
+        
+        </div>
+      </div>
+    </div> -->
+  <div class="cake--img">
+    <img src={{eachCake.image}} class="card-img-top" alt="...">
+    </div>
+    <div class="card-body">
+      <h6 class="card-text">{{eachCake.name}}</h6>
+      <h6 class="card-text">Price:{{eachCake.price}}/-</h6>
+     
+      
+    </div>
+  </div>
+</div> 

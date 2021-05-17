@@ -1,0 +1,29 @@
+<div  class="box">
+    <div class="check">
+    <div ><h1 class="head">Order Summary</h1></div>
+    <div> </div>
+  </div>
+  <div class="table">
+  <table class="t">
+    <tr>
+      <th>Serial No.</th>
+      <th>Name</th>
+      <th>Weight</th>
+      <th>Quantity</th>
+      <th>Price</th>
+     
+    </tr>
+    <tr *ngFor="let value of detail let i=index">
+      <td>{{i+1}}</td>
+      <td>{{value.name}}</td>
+      <td>{{value.weight}}</td>
+      <td>{{value.quantity}}</td>
+      <td>{{value.price}}</td>
+      
+    </tr>
+  </table>
+   <div><button routerLink="/checkout/address" class="btn">Next</button></div>
+  </div>   
+       
+  </div>
+ 

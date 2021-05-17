@@ -1,0 +1,75 @@
+.box{
+    height: 80vh;
+    width: 70vw;
+    margin-top: 50px;
+   margin-left: 50px;
+    display: grid;
+    grid-template-rows: 1fr 12fr;
+    /* border: 1px solid black; */
+  }
+  .check{
+    /* border: 1px solid red; */
+    background-color: brown;
+    display: grid;
+    grid-template-columns: 4fr .5fr;
+  }
+  .head{
+    text-align: center;
+    
+    color: white;
+  }
+  
+  .checkout-button{
+    height:40px ;
+    width: 100px;
+    margin: 10px;
+    border: 1px solid white;
+    background-color: brown;
+    color: white;
+    border-radius: 8px;
+  }
+  .checkout-button:hover{
+    background-color: rgb(230, 176, 176);
+    color: brown;
+  }
+  .t{
+    width: 100%;
+    /* border: 1px solid brown; */
+  }
+  th{
+    
+    font-size: 20px;
+  }
+  th, td {
+    padding: 15px;
+    color: brown;
+  }
+  table{
+    /* border: 1px solid brown; */
+    text-align: center;
+  }
+  tr:hover{
+    background-color: rgb(204, 156, 156);
+  }
+  .remove{
+   background-color: brown;
+   color: white;
+   border-radius: 5px;
+  
+  }
+  .remove:hover{
+    background-color: rgb(226, 177, 177);
+    color: brown;
+  }
+  .btn{
+    color: white;
+    background-color: brown;
+    margin-top: 20px;
+    margin-left: 600px;
+    width: 100px;
+    height: 40px;
+    border: 1px solid rgb(247, 220, 220);
+    border-radius: 8px;
+} 
+  
+  

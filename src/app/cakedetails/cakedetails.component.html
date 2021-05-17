@@ -1,0 +1,24 @@
+<div class="box">
+<div class="left">
+    <img class="img" src="{{detail.image}}" alt="">
+    <!-- <img src="/src/assets/vegi.png" alt="hello"  *ngIf="detail.eggless">
+    <img src="/src/assets/nonveg.png" alt="hi"  *ngIf="!detail.eggless"> -->
+   
+</div>
+<div class="right">
+    <div class="right-inner">
+     <h3>{{detail.name}}</h3>
+        <p class="price"><b>Price : </b> {{detail.price}}/-</p>
+        <h4>Product detail:</h4>
+        <li>Weight : {{detail.weight}} kg</li><br>
+        <li>Flavour : {{detail.flavour}}</li><br>
+        <li>Ingredients : {{detail.ingredients}}</li><br><br>
+      
+       
+        <button  (click)="cart()" class="add" >ADD TO CART</button>
+        <button class="buy">Buy Now</button>
+    
+</div>
+</div>
+</div>
+<!-- <input type="file" name="file" [(ngModel)] = "file" (change) = "upload($event)"> -->

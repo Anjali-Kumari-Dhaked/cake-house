@@ -1,0 +1,26 @@
+<div class="box">
+  <form action="" method="POST">
+     <div>
+       <UL class="list">
+         <h1 class="head">SignUp</h1>
+         <li><label for="name"><h5>Name</h5></label></li>
+         <li><input name="name" [(ngModel)] = "signup.name" type="text" class="input" placeholder="Enter Your Name"></li><br>
+         <li> <label for="email"><h5>Email </h5></label></li>
+         <li><input name="email" [(ngModel)] = "signup.email" type="email" class="input" placeholder="Enter Your Email"></li><br>
+         <li><label for="psw"><h5>Password</h5></label></li>
+         <li><input name="password"  [(ngModel)] = "signup.password" type="password" class="input" placeholder="Enter Password"></li><br><br>
+         <li><button (click) = "validateSignup()" class="input btn">SignUp</button></li>
+       </UL>
+     </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+

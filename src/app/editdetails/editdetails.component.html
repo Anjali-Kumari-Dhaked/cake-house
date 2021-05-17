@@ -1,0 +1,31 @@
+
+<form action="" class="form">
+    <div class="head">
+    <h1>Edit Details</h1></div>
+    <div class="h">
+    <label for="name"><b>Name :</b> </label>
+    <input class="input" [(ngModel)]="edit.name"  type="text" name="name" id="" placeholder="name"><br><br>
+ 
+   <label for=""><b>Price : </b></label>
+    <input class="input" type="text" [(ngModel)]="edit.price" name="price" placeholder="price"><br><br>
+
+<label for=""><b>Weight : </b></label>
+    <input class="input" type="text" [(ngModel)]="edit.weight" name="weight" placeholder="weight"><br><br>
+
+<label for=""><b>Flavour : </b></label>
+    <input class="input" type="text" [(ngModel)]="edit.flavour" name="flavour" placeholder="flavour"><br><br>
+
+<label for=""><b>Ingredients : </b></label>
+    <input class="input" type="text" [(ngModel)]="edit.ingredients" name="ingredients" placeholder="ingredients"><br><br>
+
+
+<label for=""><b>Description : </b></label>
+    <input class="input" type="text" [(ngModel)]="edit.description" name="description" placeholder="description"><br><br>
+    <span><img [src]="edit.image" name="image" alt=""></span>
+<label for=""><b>Image : </b></label>
+<input  (change) = "upload($event)"  type="file" class="input" name="image" id="" ><br><br>
+
+<button class="btn">Upload</button>
+<button class="btn" (click)="save">Save</button>
+</div>
+</form>

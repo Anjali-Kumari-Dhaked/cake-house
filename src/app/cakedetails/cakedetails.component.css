@@ -1,0 +1,46 @@
+
+.box{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 80vh;
+  width: 70vw;
+  margin: 100px 100px 100px 200px;
+  border: 1px solid brown;
+  box-shadow: 5px 5px 5px 5px rgb(179, 84, 84);
+}
+.img{
+  height:80vh ;
+  width:35vw;
+  
+}
+
+
+
+.right{
+    
+     text-align: center;
+     row-gap: 10px;
+     color: brown;
+     background-color: rgb(243, 224, 224);
+   
+     
+}
+.add{
+ background-color:brown;
+ color: white;
+ height: 30px;
+  width: 170px;
+  border-radius: 7px
+}
+.buy{
+  background-color: brown;
+  color: white;
+  margin-left: 20px;
+  height: 30px;
+  width: 100px;
+  border-radius: 7px;
+}
+.right-inner{
+  margin-top: 30px;
+  text-decoration: none;
+}
