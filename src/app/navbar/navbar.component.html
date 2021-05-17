@@ -14,14 +14,14 @@
 <div>
   <button class="order" *ngIf = "!num" routerLink="/add-cart" (click)="cart()">Cart</button> 
   </div>
-  <div><button class="button" routerLink="/admin">Admin</button></div>
-  <div ><button class="login" *ngIf = "num" routerLink="/login">Login</button> 
-    <button (click) = "logout()" *ngIf = "!num" class=" login" >
-      LogOut
-    </button></div>
-    <div> <button class="button" routerLink="/myorder">MyOrder</button></div>
+  <div><button class="button" routerLink="/admin" (click)="cart()" *ngIf = "!num">Admin</button></div>
+  
+    <div> <button class="button" routerLink="/myorder" (click)="cart()" *ngIf = "!num">MyOrder</button></div>
     
-
+    <div ><button class="login" *ngIf = "num" routerLink="/login">Login</button> 
+      <button (click) = "logout()" *ngIf = "!num" class=" login" >
+        LogOut
+      </button></div>
 </nav>
 
 

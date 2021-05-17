@@ -3,34 +3,29 @@
     <div class="head">
     <h1>Order Confirmation</h1></div>
     <div class="h" >
-    <label for="name"><b>Name :</b>{{detail.name}} </label><br><br>
-    <!-- <input class="input" [(ngModel)]="checkoutDetails.name" type="text" placeholder="Name" name="name"><br><br> -->
+    <label for="name"><span><b>Name : </b></span>{{detail.name}} </label><br>
+   
  
-   <label for=""><b>Address :</b>{{detail.address}} </label>
-   <!-- <input class="input" [(ngModel)]="checkoutDetails.address" type="text" name="address" id="" placeholder="Address"> -->
-   <br><br>
+   <label for=""><b>Address : </b>{{detail.address}} </label>
+  
+   <br>
 
-<label for=""><b>Cake  : </b>{{detail.cakes[0].name}}</label><br><br>
+
 <label for=""><b>Phone : </b>{{detail.phone}}</label>
-<!-- <input class="input" [(ngModel)]="checkoutDetails.phone" type="text" placeholder="Phone" name="phone"> -->
-<br><br>
+
+<br>
 
 <label for=""><b>Pincode :</b>{{detail.pincode}} </label>
-<!-- <input class="input" [(ngModel)]="checkoutDetails.pincode" type="text" placeholder="Pincode" name="pincode"> -->
-<br><br>
+
+<br>
 
 <label for=""><b>City : </b>{{detail.city}}</label>
-<!-- <input class="input" [(ngModel)]="checkoutDetails.city" type="text" name="city" id="" placeholder="City"> -->
-<br><br>
+
+<br>
 
 
-<label for=""><b>Price :</b>{{detail.price}} </label>
-<!-- <input class="input" [(ngModel)]="checkoutDetails.price" type="text" name="price" id="" placeholder="City" disabled> -->
-<br><br>
-
-   
-
-<!-- <button class="btn" (click)="orderCake()">order now</button> -->
+<label for=""><b>Price :</b>{{detail.price}} </label><br>
+<button class="btn" (click)="orderCake()">Confirm Order</button>
 </div>
 </form>
   

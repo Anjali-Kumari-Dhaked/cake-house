@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -44,10 +45,29 @@ addDetails : any =[];
 // ]
 
 cakeCollection : any=[];
+checkoutDetails:any={};
+
+
+  constructor(private router: Router, private http: HttpClient) { }
+ order(){
+  let apiUrl = `https://apifromashu.herokuapp.com/api/cakecart`;
+  this.http.post(apiUrl, {}).subscribe(
+    (response: any) => {
+      // this.intercept.navigationInterceptor(response)
+      // this.checkoutCart = response.data;
+      this.checkoutDetails['cakes'] = response.data
+      this.checkoutDetails.price = response.data.reduce((acc:any, value:any) => acc + value.price,0);
+      console.log(this.checkoutDetails);
+
+    },
+    (error:any) => {
+      console.log('this is response' + error);
+    }
+  );
+}
 
 
 
-  constructor(private router: Router) { }
   validate(inputText:any)
 {
 var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;

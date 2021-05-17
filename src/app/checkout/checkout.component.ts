@@ -14,46 +14,45 @@ export class CheckoutComponent implements OnInit {
   totalPrice:any;
   placeorder:any={};
   constructor(private cs:CommonService,private http:HttpClient , private router:Router) {
-    this.order();
+    // this.order();
    
    }
 
   ngOnInit(): void {
   }
- order(){
-  let apiUrl = `https://apifromashu.herokuapp.com/api/cakecart`;
-  this.http.post(apiUrl, {}).subscribe(
-    (response: any) => {
-      // this.intercept.navigationInterceptor(response)
-      // this.checkoutCart = response.data;
-      this.checkoutDetails['cakes'] = response.data
-      this.checkoutDetails.price = response.data.reduce((acc:any, value:any) => acc + value.price,0);
-      console.log(this.checkoutDetails);
+//  order(){
+//   let apiUrl = `https://apifromashu.herokuapp.com/api/cakecart`;
+//   this.http.post(apiUrl, {}).subscribe(
+//     (response: any) => {
+//       // this.intercept.navigationInterceptor(response)
+//       // this.checkoutCart = response.data;
+//       this.checkoutDetails['cakes'] = response.data
+//       this.checkoutDetails.price = response.data.reduce((acc:any, value:any) => acc + value.price,0);
+//       console.log(this.checkoutDetails);
 
-    },
-    (error:any) => {
-      console.log('this is response' + error);
-    }
-  );
-}
+//     },
+//     (error:any) => {
+//       console.log('this is response' + error);
+//     }
+//   );
+// }
 
-orderCake() {
-  console.log(this.checkoutDetails);
-  let apiUrl = "https://apifromashu.herokuapp.com/api/addcakeorder";
-  this.http.post(apiUrl, this.checkoutDetails).subscribe(
-    (response: any) => {
+// orderCake() {
+//   console.log(this.checkoutDetails);
+//   let apiUrl = "https://apifromashu.herokuapp.com/api/addcakeorder";
+//   this.http.post(apiUrl, this.checkoutDetails).subscribe(
+//     (response: any) => {
 
-      console.log("AddCakeOrder response",response);
+//       console.log("AddCakeOrder response",response);
       
       
 
-    },
-    (error:any) => {
-      console.log('this is response' + error);
-    }
-  );
+//     },
+//     (error:any) => {
+//       console.log('this is response' + error);
+//     }
+//   );
 
-}
 
 
 

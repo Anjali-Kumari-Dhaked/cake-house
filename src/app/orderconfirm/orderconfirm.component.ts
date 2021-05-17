@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { CommonService } from '../common.service';
 
 @Component({
@@ -10,26 +11,33 @@ import { CommonService } from '../common.service';
 })
 export class OrderconfirmComponent implements OnInit {
   detail:any={};
-  constructor(private http: HttpClient , private route:Router) {
-    let apiUrl = "https://apifromashu.herokuapp.com/api/cakeorders";
-    this.http.post(apiUrl, {}).subscribe(
+  
+  constructor(private http: HttpClient , private route:Router, private router:ActivatedRoute,private cs:CommonService, private toast: ToastrService) {
+    this.cs.order();
+    this.detail=this.cs.checkoutDetails;
+    console.log(this.detail);
+  }
+
+ 
+  ngOnInit(): void {
+  }
+  orderCake() {
+  
+    console.log(this.detail);
+    let apiUrl = "https://apifromashu.herokuapp.com/api/addcakeorder";
+    this.http.post(apiUrl, this.detail).subscribe(
       (response: any) => {
-        // this.toast.success(``);
-        console.log('Order Confirmation', response);
-        this.detail= response.cakeorders;
-      
-        console.log(this.detail);
-        this.detail=this.detail[this.detail.length-1];
-        // this.detail.forEach((ele:any) => {
-        //   let date = new Date(ele.orderdate);
-        //   ele.orderdate=`${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`;
-        // });
+  
+        console.log("Order Confirm",response);
+        this.toast.success("Order Successful");
+        
+        
+  
       },
       (error:any) => {
         console.log('this is response' + error);
       }
     );
-    }
-  ngOnInit(): void {
+  
   }
 }

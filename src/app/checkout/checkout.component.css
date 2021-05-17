@@ -1,14 +1,18 @@
-/* .box{
-    width: 20vw;
+.box{
+    width: 15vw;
     height: 100vh;
-    border: 2px solid brown;
-} */
-li{
+    border: 1px solid brown;
+    box-shadow: 5px 5px 5px 5px brown;
     
+}
+li{
+    border: 1px solid brown;
     list-style: none;
 }
 a{
+    color: brown;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .grid{
