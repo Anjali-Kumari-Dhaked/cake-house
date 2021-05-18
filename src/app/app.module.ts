@@ -33,6 +33,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { OrderconfirmComponent } from './orderconfirm/orderconfirm.component';
 import { CommonService } from './common.service';
 import { CanDeactivateGuardService } from './can-deactivate-guard.service';
+import { AdminAddCakeComponent } from './admin-add-cake/admin-add-cake.component';
 // import {NgxPaginationModule} from 'ngx-pagination'; 
 
 
@@ -65,6 +66,7 @@ import { CanDeactivateGuardService } from './can-deactivate-guard.service';
     AddressComponent,
     PaymentComponent,
     OrderconfirmComponent,
+    AdminAddCakeComponent,
 
     
     

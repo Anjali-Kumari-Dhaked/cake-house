@@ -1,0 +1,40 @@
+<form action="" class="form">
+    <div class="head">
+    <h1>add Details</h1></div>
+    <div class="h">
+    <label for="name"><b>Name :</b> </label>
+    <input class="input" [(ngModel)]="add.name"  type="text" name="name" id="" placeholder="name"><br><br>
+ 
+   <label for=""><b>Price : </b></label>
+    <input class="input" type="text" [(ngModel)]="add.price" name="price" placeholder="price"><br><br>
+
+<label for=""><b>Weight : </b></label>
+    <input class="input" type="text" [(ngModel)]="add.weight" name="weight" placeholder="weight"><br><br>
+
+<label for=""><b>Eggless : </b></label>
+    <input class="input" type="checkbox" [(ngModel)]="add.eggless" name="flavour" placeholder="flavour"><br><br>
+
+<label for=""><b>Ingredients : </b></label>
+    <input class="input" type="text" [(ngModel)]="add.ingredients" name="ingredients" placeholder="ingredients"><br><br>
+
+<label for=""><b>Categories:</b></label><br>
+<select name="categories" [(ngModel)]="add.categories" >
+    <option [ngValue]="'Birthday Cake'">Birthday cake</option>
+    <option [ngValue]="'Anniversary Cake'">Anniversary cake</option>
+    <option [ngValue]="'General Cake'">General cake</option>
+    <option [ngValue]="'Special cake'">Special cake</option>
+</select>
+<br><br>
+
+<label for=""><b>Description : </b></label>
+    <textarea class="input des"  [(ngModel)]="add.description" name="description" placeholder="description"></textarea><br><br>
+
+
+    <span ><img [src]="add.image" name="image" alt="" class="i" ></span><br>
+<label for=""><b>Image : </b></label>
+<input  (change) = "upload($event)"  type="file" class="input" name="image" id="" ><br><br>
+
+<button class="btn" (click)="addCake()">Upload</button>
+<button class="btn" (click)="save()">Save</button>
+</div>
+</form>

@@ -11,3 +11,12 @@
     border-radius: 5px;
     
 }
+.add{
+    float: right;
+    background-color: brown;
+    color: white;
+    border: 1px solid rgb(238, 165, 165);
+    height: 7vh;
+    border-radius: 5px;
+    margin-top:  10px;
+}

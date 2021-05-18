@@ -16,6 +16,8 @@ export class AddressComponent implements OnInit {
   totalPrice:any;
   placeorder:any={};
   constructor(private cs:CommonService,private http:HttpClient, private router:Router, private toastr: ToastrService) {
+    this.cs.address=true;
+    this.cs.summary=true;
     this.cs.order();
     this.checkoutDetails=this.cs.checkoutDetails;
    

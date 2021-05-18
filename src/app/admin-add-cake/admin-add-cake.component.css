@@ -1,0 +1,49 @@
+.form{
+    border: 1px solid brown;
+    margin-left: 200px;
+    margin-top: 30px;
+    width: 60vw;
+    height: 100vh;
+    height: auto;
+  box-shadow: 5px 5px 5px 5px brown;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+  
+}
+.head{
+    text-align: center;
+    background-color: brown;
+    color: white;
+}
+.input{
+    background-color: rgb(255, 241, 241);
+    color: brown;
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 30px;
+    width: 300px;
+}
+.h{
+    margin-left: 130px;
+    color: brown;
+}
+.btn{
+    color: white;
+    background-color: brown;
+    width: 450px;
+    height: 40px;
+    border: 1px solid rgb(247, 220, 220);
+}
+/* img,svg{
+    height: 30vh;
+    width: 30vw;
+} */
+img, svg {
+    vertical-align: middle;
+    height: 30vh;
+    width: 20vw;
+}
+.des{
+height: 10vh;
+
+}

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CanComponentDeactivate } from '../can-deactivate-guard.service';
 import { CommonService } from '../common.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { CommonService } from '../common.service';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
-export class AdminComponent implements OnInit {
+export class AdminComponent implements CanComponentDeactivate {
 
   card: any=[];
   constructor(public cs: CommonService, private router:Router, private http:HttpClient) {
@@ -25,6 +26,10 @@ export class AdminComponent implements OnInit {
     
 
 }
+canDeactivate(){
+  return window.confirm("Do You really want changes?");
+}
+
 sendID(i:any) {
   console.log(i);
   this.router.navigate(['/admin/editdetails', i]);
