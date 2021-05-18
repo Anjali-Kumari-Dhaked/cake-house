@@ -7,44 +7,7 @@ import { ToastrService } from 'ngx-toastr';
   providedIn: 'root'
 })
 export class CommonService {
-  // question11: any=""
-  // question10 = "apna karle chal"
-
-//   constructor() { }
- 
-// }
-addDetails : any =[];
-// cardCollection: any =[
-//   {
-//     image:"/assets/Vanila Cake.jpg",
-//     name:"Vanila Cake",
-//     eggless:true,
-//     price: "100",
-//     weight:"500gm"
-//   },
-//   {
-//     image:"/assets/Chocolate Cake.jpg",
-//     name:"Chocolate Cake",
-//     eggless:false,
-//     price: "300",
-//     weight:"1kg"
-//   },
-//   {
-//     image:"/assets/Pineapple-Cake.jpg",
-//     name:"Pineapple Cake",
-//     eggless:true,
-//     price: "100",
-//     weight:"500gm"
-//   },
-//   {
-//     image:"/assets/Strawberry Cake.jpg",
-//     name:"Strawberry Cake",
-//     eggless:true,
-//     price: "500",
-//     weight:"2kg"
-//   }
-// ]
-
+  
 cakeCollection : any=[];
 checkoutDetails:any={};
 orderconfirm:any = false;
@@ -71,7 +34,7 @@ canActivate(
     return true;
   }
   this.toaster.info("You should login first");
-  this.router.navigate(['login']);
+  this.router.navigate(['/login']);
   return false;
 }
 

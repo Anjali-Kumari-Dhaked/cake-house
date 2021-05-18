@@ -16,6 +16,7 @@ import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
 import { OrderconfirmComponent } from './orderconfirm/orderconfirm.component';
 import { CommonService } from 'cake-house/src/app/common.service';
+import { CanDeactivateGuardService } from './can-deactivate-guard.service';
 // import { AppComponent} from './app.component';
 // import { from } from 'rxjs';
 // import { CakedetailsComponent } from './cakedetails/cakedetails.component';
@@ -33,6 +34,7 @@ canActivate:[CommonService],
 children:[
   {path:"", component:SummaryComponent},
   { path:"address", component:AddressComponent},
+  {path:"payment", component:PaymentComponent ,canDeactivate:[CanDeactivateGuardService]},
   {path:"orderconfirm", component:OrderconfirmComponent}
 ]},
 {path:'admin',

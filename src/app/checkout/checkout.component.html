@@ -5,7 +5,7 @@
   <li>
   <a *ngIf="cs.address" [routerLink]="['address']">Address</a></li>
 <div *ngIf="!cs.address">Address</div>
-
+<li routerLink="/checkout/payment">Payment</li>
 <li>
   <a *ngIf="cs.orderconfirm" routerLink="/checkout/orderconfirm">Order Confirmation</a></li>
 <div *ngIf="!cs.orderconfirm">Order Confirmation</div>

@@ -32,6 +32,7 @@ import { AddressComponent } from './address/address.component';
 import { PaymentComponent } from './payment/payment.component';
 import { OrderconfirmComponent } from './orderconfirm/orderconfirm.component';
 import { CommonService } from './common.service';
+import { CanDeactivateGuardService } from './can-deactivate-guard.service';
 // import {NgxPaginationModule} from 'ngx-pagination'; 
 
 
@@ -82,7 +83,7 @@ import { CommonService } from './common.service';
    
   ],
   providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthinterceptService, multi:true},
-  CommonService],
+  CommonService, CanDeactivateGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

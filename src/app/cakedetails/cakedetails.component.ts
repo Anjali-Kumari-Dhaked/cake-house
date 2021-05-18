@@ -38,6 +38,10 @@ export class CakedetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 cart(){
+  
+
+
+
   if (!localStorage.getItem('user')) {
     this.toast.error('Please login');
     this.router.navigate(['/login']);

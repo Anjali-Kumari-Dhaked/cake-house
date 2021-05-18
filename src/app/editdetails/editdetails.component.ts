@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-editdetails',
@@ -12,6 +13,9 @@ export class EditdetailsComponent implements OnInit {
   
   id:any;
   file:any;
+  
+    
+
   constructor(private http:HttpClient, private route:ActivatedRoute) { 
     this.id = this.route.snapshot.params['cakeid'];
     console.log(this.id);
@@ -32,9 +36,20 @@ export class EditdetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
+
+
+
+
+
  save(){
    console.log(this.edit);
  }
+
+
+
+
 
   upload(event: any) {
 
