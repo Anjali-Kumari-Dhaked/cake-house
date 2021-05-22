@@ -1,13 +1,13 @@
 .form{
     border: 1px solid brown;
-    margin-left: 300px;
-    margin-top: 30px;
+   margin: 5% auto 5% auto;
     width: 50vw;
     height: 100vh;
     height: auto;
-  box-shadow: 5px 5px 5px 5px brown;
+
     display: grid;
     grid-template-rows: 1fr 10fr;
+    background-color: rgb(253, 253, 253);
   
 }
 .head{

@@ -3,6 +3,7 @@ import { CommonService } from '../common.service';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(private check:CommonService,private router : Router, private http: HttpClient,private toastr: ToastrService) { }
   
   ngOnInit(): void {
-
+ 
   }
  
   login(){
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
       console.log(response);
       localStorage.setItem("user", JSON.stringify(response));
       localStorage.setItem("token", JSON.stringify(response.token));
+      this.toastr.success("Login Successfully");
       this.router.navigate(['/']);
     }, (error
     )=>{

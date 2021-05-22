@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin-add-cake',
@@ -11,7 +13,7 @@ export class AdminAddCakeComponent implements OnInit {
 add:any={};
 
 file:any;
-  constructor(private http:HttpClient, private route:ActivatedRoute) { 
+  constructor(private http:HttpClient, private route:ActivatedRoute, private toast:ToastrService) { 
    
     console.log(this.add);
   }
@@ -25,15 +27,24 @@ file:any;
 
 
 
-  save(){
-    // this.add.ingredients.split(" , ");
-    this.add.ingredients=this.add.ingredients.split(',');
-    console.log("Enter data is",this.add);
-    
-  }
+  // save(){
+  //   // this.add.ingredients.split(" , ");
+   
+  // }
  
  addCake(){
-  console.log(this.add);
+  
+  if(!this.add.name|| !this.add.price || !this.add.ingredients||!this.add.weight|| !this.add.categories|| ! this.add.description||! this.add.image|| !this.add.eggless){
+    this.toast.warning("All fields are required");
+  }
+  
+
+
+
+
+  else{
+    this.add.ingredients=this.add.ingredients.split(',');
+  console.log("Enter data is",this.add);
   let apiUrl = "https://apifromashu.herokuapp.com/api/addcake";
   this.http.post(apiUrl, this.add).subscribe(
     (response: any) => {
@@ -47,7 +58,7 @@ file:any;
       console.log('this is response' + error);
     }
   );
-
+  }
 }
  
  

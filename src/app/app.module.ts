@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { HighlightDirective } from './highlight.directive';
 import { SlidebarComponent } from './slidebar/slidebar.component';
-import { SearchComponent } from './search/search.component';
+
 import { CakeCardComponent } from './cake-card/cake-card.component';
 import { HomeComponent } from './home/home.component';
 import { ForgotComponent } from './forgot/forgot.component';
@@ -20,7 +20,6 @@ import { AddCartComponent } from './add-cart/add-cart.component';
 import { FilterComponent } from './filter/filter.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { ToastrModule } from 'ngx-toastr';
 import { AuthinterceptService } from './authintercept.service';
 import { CheckoutComponent } from './checkout/checkout.component';
@@ -34,13 +33,11 @@ import { OrderconfirmComponent } from './orderconfirm/orderconfirm.component';
 import { CommonService } from './common.service';
 import { CanDeactivateGuardService } from './can-deactivate-guard.service';
 import { AdminAddCakeComponent } from './admin-add-cake/admin-add-cake.component';
-// import {NgxPaginationModule} from 'ngx-pagination'; 
-
-
+import { NgxPaginationModule } from 'ngx-pagination';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { DiscountPipe } from './discount.pipe';
 
  
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +45,6 @@ import { AdminAddCakeComponent } from './admin-add-cake/admin-add-cake.component
     LoginComponent,
     HighlightDirective,
     SlidebarComponent,
-    SearchComponent,
     CakeCardComponent,
     HomeComponent,
     ForgotComponent,
@@ -67,13 +63,8 @@ import { AdminAddCakeComponent } from './admin-add-cake/admin-add-cake.component
     PaymentComponent,
     OrderconfirmComponent,
     AdminAddCakeComponent,
-
-    
-    
-  
-  
-    
-  ],
+    DiscountPipe,
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -82,10 +73,14 @@ import { AdminAddCakeComponent } from './admin-add-cake/admin-add-cake.component
     CommonModule,
     BrowserAnimationsModule, 
     ToastrModule.forRoot(),
+    NgxPaginationModule,
+    NgxSpinnerModule
+   
    
   ],
   providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthinterceptService, multi:true},
   CommonService, CanDeactivateGuardService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

@@ -4,21 +4,17 @@ import { Directive , ElementRef, HostListener, Input } from '@angular/core';
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
-  // 
-  constructor(private element : ElementRef) {
-//     console.log("this element", this.element)
-//     this.htmlelement = this.element.nativeElement
-//     // this.htmlelement.style.color = "yellow"
-//     // this.htmlelement.className = "alert alert-success"
-//     this.htmlelement.classList.add("btn")
-//     this.htmlelement.classList.add("btn-primary")
-//     console.log("...jjh")
+  
+  constructor(private element : ElementRef) {}
+  @HostListener('mouseover')
+  onMouseOver() {
+    this.element.nativeElement.style.transform= 'scale(1.06, 1.06)';
   }
-//  @HostListener('mouseenter') redcolor(){
-//    this.htmlelement.style.color = this.entercolor
-//  }
-//  @HostListener('mouseleave') yellowcolor(){
-//   this.htmlelement.style.color = this.leavecolor
-//  }
+
+  @HostListener('mouseout')
+  onMouseOut() {
+    this.element.nativeElement.style.transform =  '';
+  }
+
 }
 

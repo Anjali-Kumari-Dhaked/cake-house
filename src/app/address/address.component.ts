@@ -26,7 +26,7 @@ export class AddressComponent implements OnInit {
   ngOnInit(): void {
   }
 confirm(){
-if(!this.checkoutDetails.name && !this.checkoutDetails.address&& !this.checkoutDetails.phone && !this.checkoutDetails.pincode &&! this.checkoutDetails.city){
+if(!this.checkoutDetails.name || !this.checkoutDetails.address||!this.checkoutDetails.phone || !this.checkoutDetails.pincode || ! this.checkoutDetails.city){
   this.toastr.warning("All Fields are required");
 }
 

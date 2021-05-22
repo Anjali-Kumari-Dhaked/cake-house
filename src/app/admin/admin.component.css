@@ -1,9 +1,14 @@
+.box{
+    width: 70vw;
+    height: 100vh;
+    margin: 3% auto auto auto;
+}
 .image{
     height: 5vh;
     width: 7vw;
 }
 .button{
-    background-color: brown;
+    background-color: rgb(119, 44, 44);
     color: white;
     border: 1px solid rgb(238, 165, 165);
     height: 5vh;
@@ -13,10 +18,15 @@
 }
 .add{
     float: right;
-    background-color: brown;
+    background-color: rgb(105, 30, 30);
     color: white;
     border: 1px solid rgb(238, 165, 165);
     height: 7vh;
+    width: 4vw;
     border-radius: 5px;
-    margin-top:  10px;
+    /* margin-top:  5px; */
+}
+.head{
+    background-color: rgb(88, 22, 22);
+    color: white;
 }

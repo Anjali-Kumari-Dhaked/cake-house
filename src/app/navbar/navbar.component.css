@@ -1,8 +1,8 @@
 
 .navbar{
     display: grid;
-    grid-template-columns: 5fr 2fr .7fr .5fr .5fr .5fr ;
-    background-color: rgb(22, 5, 5);
+    grid-template-columns: 6fr 3fr .6fr .6fr .6fr .5fr .5fr   ;
+    background-color: rgb(12, 3, 3);
    
     color: white;
     height: 9vh;
@@ -18,31 +18,45 @@
   grid-template-columns: 4fr .5fr;
 }
 .search{
-   background-color: rgb(255, 227, 227);
-   border: 1px solid rgb(238, 165, 165);
-   color: brown;
+   background-color: rgb(247, 241, 241);
+   border: 1px solid rgb(143, 125, 125);
+   color: rgb(97, 25, 25);
   
    border-radius: 3px;
-   width: 96%;
-   height: 5vh;
+   width: 98%;
+   height: 6vh;
+}
+.sea{
+  width: 5vw;
+  height: auto;
+  background-color: rgb(29, 8, 8);
+  color: white;
+  border: 1px solid rgb(238, 165, 165);
+  padding: 10%;
+  border-radius: 5px;
+ 
 }
 .button{
-    background-color: brown;
+    background-color: rgb(29, 8, 8);
     color: white;
     border: 1px solid rgb(238, 165, 165);
-    height: 5vh;
+    height: auto;
+    width: auto;
+    padding: 10%;
     border-radius: 5px;
+   
     
     
 }
 .order{
-  margin-left: 20px;
-  background-color: brown;
+  margin-left: 25%;
+  background-color: rgb(29, 9, 9);
   color: white;
   border: 1px solid rgb(238, 165, 165);
   border-radius: 5px;
-  height: 5vh;
-  width: 4vw;
+  /* height: 5vh;
+  width: 3vw; */
+  padding: 10%;
 }
 /* .img{
   height: 200px;
@@ -54,6 +68,6 @@
  border: 1px solid rgb(238, 165, 165);
  border-radius: 5px;
  height: 5vh;
-  width: 4vw;
+
 } 
 

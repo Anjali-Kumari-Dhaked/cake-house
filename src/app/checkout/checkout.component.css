@@ -1,25 +1,24 @@
 .box{
+    margin: 35% auto auto 5%; 
     width: 15vw;
-    height: 100vh;
-    border: 1px solid brown;
-    box-shadow: 5px 5px 5px 5px brown;
+    height: 25vh;
     
+    background-color: rgb(240, 232, 232);
+    border-radius: 10%;
 }
 li{
-    border: 1px solid brown;
-    list-style: none;
+   list-style: none;
 }
+
 a{
     color: brown;
     text-decoration: none;
     font-weight: bold;
-}
 
+}
 .grid{
     display: grid;
     grid-template-columns: 1fr 10fr;
-  
-  
 }
 
 

@@ -1,13 +1,12 @@
 .box{
   height: 50vh;
   width: 30vw;
-  border: 1px solid brown;
-  margin-left: 400px;
-  margin-top: 100px;
-  color: brown;
+ 
+margin: 5% auto 5% 30%;
+  color: rgb(110, 30, 30);
   align-items: center;
-  background-color: rgb(250, 231, 231);
-  box-shadow: 5px 5px 5px 5px brown;
+  background-color: rgb(250, 245, 245);
+
   border-radius: 5px;
   
 }
@@ -21,15 +20,15 @@
 #email{
   height: 30px;
   width: 330px;
-  background-color: rgb(252, 224, 224);
+  background-color: rgb(243, 234, 234);
   color: brown;
   border: 1px solid brown;
   border-radius: 6px;
 }
 .forgot{
-  height: 30px;
+  height: 7vh;
   width: 330px;
-  background-color: brown;
+  background-color: rgb(93, 23, 23);
   color: white;
   border: 1px solid brown;
   border-radius: 6px;

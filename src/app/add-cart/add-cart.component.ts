@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonService } from '../common.service';
 
 @Component({
@@ -10,17 +10,21 @@ import { CommonService } from '../common.service';
 })
 export class AddCartComponent implements OnInit {
  detail:any=[];                
-constructor(private cs:CommonService, private http:HttpClient , private route:Router) {
-  this.cart();
+constructor(private cs:CommonService, private http:HttpClient , private route:Router,private router:ActivatedRoute) {
+  // this.cart();
+  router.data.subscribe((response)=>{
+    this.detail=response[0].data;
+  })
+
 }
 cart(){
     let apiUrl = `https://apifromashu.herokuapp.com/api/cakecart`;
       this.http.post(apiUrl, {}).subscribe(
         (response: any) => {
           // this.toast.success(``);
-          console.log('cart items', response);
+          // console.log('cart items', response);
           this.detail= response.data;
-          console.log(this.detail);
+          // console.log(this.detail);
         },
         (error) => {
           console.log('this is response' + error);

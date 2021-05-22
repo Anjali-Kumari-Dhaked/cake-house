@@ -1,17 +1,18 @@
 .page{
   /* border: 1px solid black; */
-  box-sizing: border-box;
+  /* box-sizing: border-box;
  margin-top: 75px;
  margin-left: 30%;
- margin:Center;
- width: 35vw;
+ margin:Center; */
+ margin: auto auto auto auto;
+ width: 33vw;
  height: 72vh;
  background:white 0% 0% no-repeat padding-box;
- box-shadow: 5px 5px 5px 5px brown;
+
  border-radius: 10px;
  opacity: 1;
- background-color: rgba(253, 238, 238, 0.959);
- color: brown;
+ background-color: rgba(247, 242, 242, 0.959);
+ color: rgb(58, 7, 7);
  font-size: 16px;
 
 
@@ -30,7 +31,7 @@
   text-align: center;
   /* color: #9D6AED; */
   font-family: 'Montserrate';
-  margin-top: 20px;
+  margin: 5% auto auto auto;
   /* background-color: yellow; */
 }
 .email{
@@ -51,7 +52,7 @@
 
 }
 .label-forgot{
-  color: brown;
+  color: rgb(141, 15, 15);
   text-align: right;
   text-decoration: none;
 }
@@ -71,9 +72,9 @@ input[type=password] {
   border: 3px solid rgb(243, 217, 217);
 }
 .btn{
-  height: 5vh;
+  height: 6vh;
   width: 28vw;
-  background-color:brown;
+  background-color:rgb(102, 23, 23);
   color: white;
   border-radius: 5px;
   border: none;

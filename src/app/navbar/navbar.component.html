@@ -1,3 +1,7 @@
+
+
+
+
 <nav class="navbar">
   <div ><h3  routerLink="/" class="head">Cake House</h3></div>
   <div>
@@ -6,21 +10,20 @@
  
   <input type="search" class="search" placeholder="Search....." name="searchCake" [(ngModel)]="searchCake" >
  
-  <button class="button" (click)="search()" type="submit">Search</button>
+  <button class=" sea" (click)="search()" type="submit">Search</button>
 
 </form>
 
 </div>
 <div>
-  <button class="order" *ngIf = "!num" routerLink="/add-cart" (click)="cart()">Cart</button> 
+  <button class="order fa fa-shopping-cart" *ngIf = "!num" routerLink="/add-cart" (click)="cart()"></button> 
   </div>
-  <div><button class="button" routerLink="/admin" (click)="cart()" *ngIf = "!num">Admin</button></div>
+  <div><button  class="order fa fa-user-circle" routerLink="/admin" (click)="cart()" *ngIf = "!num"></button></div>
   
     <div> <button class="button" routerLink="/myorder" (click)="cart()" *ngIf = "!num">MyOrder</button></div>
     
-    <div ><button class="login" *ngIf = "num" routerLink="/login">Login</button> 
-      <button (click) = "logout()" *ngIf = "!num" class=" login" >
-        LogOut
+    <div ><button class="order" *ngIf = "num" routerLink="/login">Login</button> 
+      <button class="order " (click) = "logout()" *ngIf = "!num"  >LogOut
       </button></div>
 </nav>
 

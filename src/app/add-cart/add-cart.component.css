@@ -1,22 +1,23 @@
 .box{
+  margin: auto;
+  padding: 5%;
   height: 80vh;
-  width: 70vw;
-  margin-top: 50px;
-  margin-left: 200px ;
+  width: 60vw;
   display: grid;
   grid-template-rows: 1fr 12fr;
   /* border: 1px solid black; */
 }
 .check{
   /* border: 1px solid red; */
-  background-color: brown;
+  background-color: rgb(65, 19, 19);
+  
   display: grid;
   grid-template-columns: 4fr .5fr;
 }
 .head{
   text-align: center;
   
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .checkout-button{
@@ -24,12 +25,12 @@
   width: 100px;
   margin: 10px;
   border: 1px solid white;
-  background-color: brown;
+  background-color: rgb(104, 32, 32);
   color: white;
   border-radius: 8px;
 }
 .checkout-button:hover{
-  background-color: rgb(230, 176, 176);
+  background-color: rgb(233, 214, 214);
   color: brown;
 }
 .t{
@@ -49,7 +50,7 @@ table{
   text-align: center;
 }
 tr:hover{
-  background-color: rgb(204, 156, 156);
+  background-color: rgb(243, 235, 235);
 }
 .remove{
  background-color: brown;

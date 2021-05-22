@@ -1,6 +1,6 @@
 .cake--container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-row-gap: 80px;
     margin-top: 20px;
     margin-left:  20px;
@@ -9,11 +9,7 @@
 .card{
     width: 14rem;
     height: 300px;
-    box-shadow: 3px 3px 2px 2px rgb(179, 84, 84);
-    
-}
-.card:hover{
-    transform: scale(1.06, 1.06);
+    /* box-shadow: 3px 3px 2px 2px rgb(179, 84, 84); */
 }
 .card-img-top{
     width: 14rem;
@@ -27,50 +23,9 @@
     margin-top: 10px;
     row-gap: 20px;
 }
-
-
-
-
-
-
-
-
- /* .card-img-top{
-    height: 100px;
-    width: 100px;
-    background-size: cover;
+.my-pagination {
+ padding: 4%;
 }
-.card{
-    height: 470px;
-    width: 400px;
-}
-.card:hover{
-    transform: scale(1.01,1.01);
-    border: 2px solid red;
-    border-style: double;
-}
-
-.cake--container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    padding: 30px 20px;
-    grid-row-gap: 20px;
-}
-.cake--container>cake{
-    padding: 20px;
-}
-.enter{
-    border-radius: 4px;
-    background: #ffe6e6;
-    transition: .3s transform cubic-bezier(.155,.105,.295,1.12), .3s box-shadow, .3s webkit-transform;
-    padding: 14px 80px 18px 36px;
-    cursor:pointer ;
-    transform:  scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0 ,0, 0,.06);
-}
-.card:hover{
-    border: 2px solid red;
-} */
 .veg{
     margin: auto;
 }

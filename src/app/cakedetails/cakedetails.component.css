@@ -1,16 +1,18 @@
 
 .box{
+  margin: 5% auto 5% auto;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 80vh;
-  width: 70vw;
-  margin: 100px 100px 100px 200px;
-  border: 1px solid brown;
-  box-shadow: 5px 5px 5px 5px rgb(179, 84, 84);
+
+  height: 60vh;
+  width: 60vw;
+  /* box-shadow: 5px 5px 5px 5px rgb(99, 22, 22); */
 }
 .img{
-  height:80vh ;
-  width:35vw;
+  border-radius: 6px;
+  height:60vh ;
+  width:30vw;
   
 }
 
@@ -20,27 +22,73 @@
     
      text-align: center;
      row-gap: 10px;
-     color: brown;
-     background-color: rgb(243, 224, 224);
-   
-     
+     color: rgb(90, 20, 20);
+     background-color: rgb(247, 247, 247);
 }
+
 .add{
- background-color:brown;
+ background-color:rgb(95, 22, 22);
  color: white;
- height: 30px;
-  width: 170px;
+ height: 6vh;
+  width: 13vw;
   border-radius: 7px
 }
+
 .buy{
-  background-color: brown;
+  background-color: rgb(98, 19, 19);
   color: white;
   margin-left: 20px;
-  height: 30px;
+  height: 6vh;
   width: 100px;
   border-radius: 7px;
 }
 .right-inner{
   margin-top: 30px;
   text-decoration: none;
+}
+.veg{
+  position: absolute;
+ top: 25%;
+ left: 45%;
+}
+
+.non--veg{
+  position: absolute;
+  top: 25%;
+  left: 45%;
+}
+.square{
+  position: relative;
+  border: 1px solid green;
+  height: 20px;
+  width: 20px;
+}
+.circle{
+  position: absolute;
+  top:  5px;
+  right: 5px;
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  border-radius: 50%;
+}
+.square--nonveg{
+  position: relative;
+  border: 1px solid red;
+  height: 20px;
+  width: 20px;
+}
+.circle--nonveg{
+  position: absolute;
+  top: 5px;
+
+  right: 5px;
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+.vegNon{
+  height: 15px;
+  width: 15px;
 }

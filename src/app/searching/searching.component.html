@@ -1,9 +1,12 @@
-<div>
+
+<div class="box">
+<div class="minmax">
+<button class="btn">Sort By price</button><br>
   <label for="">Min Price</label>
   <input type="number" [(ngModel)]="min" name="min">
   <label for="">Max Price</label>
-  <input type="number" name="max" id="" [(ngModel)]="max">
-  <button (click)="fil()" >Filter</button>
+  <input type="number" name="max" id="" [(ngModel)]="max"><br><br>
+  <button (click)="fil()"  class="btnn">Filter</button>
 </div>
 
 
@@ -40,3 +43,4 @@
     </div>
   </div>
 </div> 
+</div>

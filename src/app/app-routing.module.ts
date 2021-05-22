@@ -17,18 +17,19 @@ import { PaymentComponent } from './payment/payment.component';
 import { OrderconfirmComponent } from './orderconfirm/orderconfirm.component';
 import { CommonService } from 'cake-house/src/app/common.service';
 import { CanDeactivateGuardService } from './can-deactivate-guard.service';
+import { ResolverService } from './resolver.service';
 // import { AppComponent} from './app.component';
 // import { from } from 'rxjs';
 // import { CakedetailsComponent } from './cakedetails/cakedetails.component';
 
 const routes: Routes = [
-  {path:'', component:HomeComponent},
+{path:'', component:HomeComponent},
 {path:'signup', component:SignupComponent},
 {path:'login', component:LoginComponent,canActivate:[CommonService]},
 {path: 'forgot',component:ForgotComponent},
 {path: 'searching', component:SearchingComponent},
 {path: 'cakedetails/:cakeid', component:CakedetailsComponent},
-{path: 'add-cart' , component:AddCartComponent, canActivate:[CommonService]},
+{path: 'add-cart' , component:AddCartComponent, canActivate:[CommonService],resolve:[ResolverService]},
 {path: 'checkout', component: CheckoutComponent, 
 canActivate:[CommonService],
 children:[

@@ -13,8 +13,11 @@ checkoutDetails:any={};
 orderconfirm:any = false;
 summary:any=false;
 address:any=false;
+apiUrl:any;
 
-  constructor(private router: Router, private http: HttpClient ,private toaster:ToastrService) { }
+  constructor(private router: Router, private http: HttpClient ,private toaster:ToastrService) {
+   
+   }
 canActivate(
   route:ActivatedRouteSnapshot,
   state:RouterStateSnapshot

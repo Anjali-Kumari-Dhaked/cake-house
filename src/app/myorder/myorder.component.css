@@ -1,8 +1,8 @@
 .box{
     height: auto;
     width: 70vw;
-    margin-top: 50px;
-    margin-left: 100px ;
+ 
+  margin: 2% auto 5% auto;
     display: grid;
     grid-template-rows: auto auto  auto ;
   }
