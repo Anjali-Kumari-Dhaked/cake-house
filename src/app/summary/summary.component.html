@@ -18,13 +18,15 @@
       <td>{{value.name}}</td>
       <td>{{value.weight}}</td>
       <td>{{value.quantity}}</td>
-      <td>{{value.price}}</td>
+      <td>{{value.price|currency:'INR'}}</td>
       
     </tr>
   </table>
-   <!-- <div><button  class="btn" routerLink="/checkout/address">Placeorder</button></div> -->
-   <div>
-   <button class="btn" routerLink="/checkout/address" (click)="placeorder()">Placeorder</button></div>
+   
+  <div>
+    <span>
+    <h5 class="price">Total Price : {{detail.price|currency:'INR'}}</h5> </span>
+    <button class="btn" routerLink="/checkout/address" (click)="placeorder()">Placeorder</button></div>
   </div>   
        
   </div>

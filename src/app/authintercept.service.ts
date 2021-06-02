@@ -16,5 +16,5 @@ export class AuthinterceptService implements HttpInterceptor {
       }})
     }
     return next.handle(req);
-  }
+ }
 }

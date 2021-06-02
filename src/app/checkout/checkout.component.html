@@ -1,11 +1,15 @@
 <div class="grid">
+
 <div class="box">
+  <!-- Summary page -->
   <li ><a routerLink="/checkout"> Summary</a></li><br>
-  <!-- <li><a [routerLink]="['address']"> Placeorder</a></li> -->
   <li>
-  <a *ngIf="cs.address" [routerLink]="['address']">Address</a></li>
+
+    <!-- Fill address detail for checkout  -->
+  <a *ngIf="cs.address" routerLink="/checkout/address">Address</a></li>
 <div *ngIf="!cs.address">Address</div>
-<!-- <li routerLink="/checkout/payment">Payment</li> -->
+
+<!-- Confirm order page -->
 <li><br>
   <a *ngIf="cs.orderconfirm" routerLink="/checkout/orderconfirm">Order Confirmation</a></li>
 <div *ngIf="!cs.orderconfirm">Order Confirmation</div>

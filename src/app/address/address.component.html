@@ -1,29 +1,33 @@
 <form action="" class="form">
+    <!-- Address Deatail header -->
     <div class="head">
-    <h1>Address Details</h1></div>
-    <div class="h">
-    <label for="name"><b>Full Name :</b> </label><br>
+       <h1>
+    <i>Billing Address</i></h1></div>
+    <div class="headings">
+    <!-- For input name -->
+    <label for="name"><h5><i class="fa fa-user"></i> Full Name :</h5> </label><br>
     <input class="input" [(ngModel)]="checkoutDetails.name" type="text" placeholder="Name" name="name"><br><br>
- 
-   <label for=""><b>Address : </b></label><br>
+
+    <!-- For input Address -->
+   <label for=""><h5><i class="fa fa-address-card"></i> Address : </h5></label><br>
    <input class="input" [(ngModel)]="checkoutDetails.address" type="text" name="address" id="" placeholder="Address"><br><br>
 
-<label for=""><b>Phone : </b></label><br>
-<input class="input" [(ngModel)]="checkoutDetails.phone" type="text" placeholder="Phone" name="phone"><br><br>
+   <!-- For input Phone no -->
+   <label for=""><h5><i class="fa fa-phone" ></i> Phone : </h5></label><br>
+   <input class="input" [(ngModel)]="checkoutDetails.phone" type="text" placeholder="Phone" name="phone"><br><br>
 
-<label for=""><b>Pincode : </b></label><br>
+   <!-- For input Pincode -->
+<label for=""><h5><i class="fas fa-list-ol"></i> Pincode : </h5></label><br>
 <input class="input" [(ngModel)]="checkoutDetails.pincode" type="text" placeholder="Pincode" name="pincode"><br><br>
 
-<label for=""><b>City : </b></label><br>
+<!-- For input City -->
+<label for=""><h5><i class="fa fa-institution"></i> City : </h5></label><br>
 <input class="input" [(ngModel)]="checkoutDetails.city" type="text" name="city" id="" placeholder="City"><br><br>
 
-
-<label for=""><b>Price : </b></label><br>
+<!-- For input Price -->
+<label for=""><h5><i class="fas fa-money-bill"></i> Price : </h5></label><br>
 <input class="input" [(ngModel)]="checkoutDetails.price" type="text" name="price" id="" placeholder="City" disabled><br><br>
 
-<!-- <button class="btn" (click)="orderCake()">order now</button> -->
 <button class="btn" (click)="confirm()">Confirm</button>
-   
-
-</div>
+   </div>
 </form>

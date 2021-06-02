@@ -1,26 +1,29 @@
 <div class="page">
-  <form name="login" method="post">
+  <form name="login">
     <div class="login-box">
         <div><h1 class="heading">Login</h1></div>
 
+        <!-- Email field -->
         <div class="email">
-            <label for="email"><b> Address</b></label>
-            <input [(ngModel)] ="detail.email" type="email" placeholder="Enter Email" name="email" required>
+            <label for="email"><h5> Address</h5></label>
+            <input class="input" [(ngModel)] ="detail.email" type="email" placeholder="Enter Email" name="email" required>
         </div>
 
+         <!-- Password field -->
         <div class="password">
             <div class="forgot">
-               <label  for="psw"><b> Password</b></label>
+               <label  for="psw"><h5> Password</h5></label>
                 <a  class="label-forgot" routerLink="/forgot">Forgot your password?</a>
             </div>
             <input class="input" [(ngModel)]="detail.password"  type="password" placeholder="Enter Password" name="psw" required>
         </div>
 
-
+<!-- Sign in button -->
         <div class="sign-button">
           <button class="btn"  value="Sign in" type="submit" (click)="login()"> LogIn  </button>
         </div>
 
+        <!-- Sign Up button -->
         <div>
             <p class="dont-have">Don't have account <a routerLink="/signup" class="sign-link">Sign up now</a></p>
         </div>

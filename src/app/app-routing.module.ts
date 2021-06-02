@@ -13,36 +13,33 @@ import { EditdetailsComponent } from './editdetails/editdetails.component';
 import { MyorderComponent } from './myorder/myorder.component';
 import { SummaryComponent } from './summary/summary.component';
 import { AddressComponent } from './address/address.component';
-import { PaymentComponent } from './payment/payment.component';
 import { OrderconfirmComponent } from './orderconfirm/orderconfirm.component';
-import { CommonService } from 'cake-house/src/app/common.service';
+import { CommonService } from './common.service';
 import { CanDeactivateGuardService } from './can-deactivate-guard.service';
 import { ResolverService } from './resolver.service';
-// import { AppComponent} from './app.component';
-// import { from } from 'rxjs';
-// import { CakedetailsComponent } from './cakedetails/cakedetails.component';
+import { CakedetailResolverService } from './cakedetail-resolver.service';
+import { CanActivateService } from './can-activate.service';
+
 
 const routes: Routes = [
 {path:'', component:HomeComponent},
 {path:'signup', component:SignupComponent},
-{path:'login', component:LoginComponent,canActivate:[CommonService]},
+{path:'login', component:LoginComponent,canActivate:[CanActivateService]},
 {path: 'forgot',component:ForgotComponent},
 {path: 'searching', component:SearchingComponent},
-{path: 'cakedetails/:cakeid', component:CakedetailsComponent},
-{path: 'add-cart' , component:AddCartComponent, canActivate:[CommonService],resolve:[ResolverService]},
-{path: 'checkout', component: CheckoutComponent, 
-canActivate:[CommonService],
+{path: 'cakedetails/:cakeid', component:CakedetailsComponent,resolve:[CakedetailResolverService]},
+{path: 'add-cart' , component:AddCartComponent,resolve:[ResolverService],canActivate:[CanActivateService]},
+{path: 'checkout', component: CheckoutComponent,
 children:[
   {path:"", component:SummaryComponent},
   { path:"address", component:AddressComponent},
-  {path:"payment", component:PaymentComponent ,canDeactivate:[CanDeactivateGuardService]},
   {path:"orderconfirm", component:OrderconfirmComponent}
 ]},
 {path:'admin',
-canActivate:[CommonService],
+canActivate:[CanActivateService],
  loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
 // {path:'editdetails/:cakeid', component:EditdetailsComponent},
-{path:'myorder', component:MyorderComponent, canActivate:[CommonService]}
+{path:'myorder', component:MyorderComponent, canActivate:[CanActivateService]}
 
 ];
 

@@ -1,31 +1,138 @@
 
-<form action="" class="form">
+<div class="container">
+    <form action="/action_page.php">
+        <h1 class="head">Edit Cake</h1>
+
+         <!-- Get input for name -->
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"><h5 class="text-heading">Name :</h5></label>
+      </div>
+      <div class="col-75">
+        <input  id="fname" [(ngModel)]="edit.name"  type="text" name="name" id="" placeholder=" Enter Cake Name.....">
+      </div>
+    </div>
+
+    <!-- Get input for price -->
+    <div class="row">
+      <div class="col-25">
+         <label for=""><h5 class="text-heading">Price : </h5></label>
+      </div>
+      <div class="col-75">
+        <input  type="text" [(ngModel)]="edit.price" name="price" placeholder="price">
+      </div>
+    </div>
+
+
+<!-- Get input for weight -->
+<div class="row">
+    <div class="col-25">
+       <label for=""><h5 class="text-heading">Weight : </h5></label>
+    </div>
+    <div class="col-75">
+     <input  type="text" [(ngModel)]="edit.weight" name="weight" placeholder="Weight....">
+    </div>
+  </div>
+
+    <!-- Get input for flavour -->
+    <div class="row">
+        <div class="col-25">
+         <label for=""><h5 class="text-heading">Flavour : </h5></label>
+        </div>
+        <div class="col-75">
+            <input class="input" type="text" [(ngModel)]="edit.flavour" name="flavour" placeholder="flavour">
+           </div>
+    </div>
+
+
+<!-- Get input for ingredients -->
+<div class="row">
+    <div class="col-25">
+        <label for=""><h5 class="text-heading">Ingredients : </h5></label>
+    </div>
+    <div class="col-75">
+        <input class="input" type="text" [(ngModel)]="edit.ingredients" name="ingredients" placeholder="ingredients">
+    </div>
+</div>
+
+
+   
+
+<!-- Get input for description -->
+<div class="row">
+    <div class="col-25">
+        <label for=""><h5 class="text-heading">Description : </h5></label>
+    </div>
+    <div class="col-75">
+        <textarea class="input" type="text" [(ngModel)]="edit.description" name="description" placeholder="description">
+            </textarea>
+    </div>
+</div>
+
+
+  <!-- Get input for image -->
+  <div class="row">
+    <div class="col-25">
+        <label for=""><h5 class="text-heading">Image : </h5></label>
+    </div>
+    <div class="col-75">
+        <span><img [src]="edit.image" name="image" alt=""></span>
+
+        <input  (change) = "upload($event)"  type="file" class="input" name="image" id="" >
+    </div>
+</div>
+    
+
+<div class="row">
+    <button class="btn" (click)="save()">Save</button>
+  </div>
+
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<!-- <form action="" class="form">
     <div class="head">
     <h1>Edit Details</h1></div>
-    <div class="h">
-    <label for="name"><b>Name :</b> </label>
+    <div class="h"> -->
+
+    <!-- Get input for name -->
+    <!-- <label for="name"><b>Name :</b> </label>
     <input class="input" [(ngModel)]="edit.name"  type="text" name="name" id="" placeholder="name"><br><br>
- 
-   <label for=""><b>Price : </b></label>
-    <input class="input" type="text" [(ngModel)]="edit.price" name="price" placeholder="price"><br><br>
+  -->
+    <!-- Get input for price -->
+   <!-- <label for=""><b>Price : </b></label>
+    <input class="input" type="text" [(ngModel)]="edit.price" name="price" placeholder="price"><br><br> -->
 
-<label for=""><b>Weight : </b></label>
-    <input class="input" type="text" [(ngModel)]="edit.weight" name="weight" placeholder="weight"><br><br>
+     <!-- Get input for weight -->
+<!-- <label for=""><b>Weight : </b></label>
+    <input class="input" type="text" [(ngModel)]="edit.weight" name="weight" placeholder="weight"><br><br> -->
 
-<label for=""><b>Flavour : </b></label>
-    <input class="input" type="text" [(ngModel)]="edit.flavour" name="flavour" placeholder="flavour"><br><br>
+     <!-- Get input for flavour -->
+<!-- <label for=""><b>Flavour : </b></label>
+    <input class="input" type="text" [(ngModel)]="edit.flavour" name="flavour" placeholder="flavour"><br><br> -->
 
-<label for=""><b>Ingredients : </b></label>
-    <input class="input" type="text" [(ngModel)]="edit.ingredients" name="ingredients" placeholder="ingredients"><br><br>
+     <!-- Get input for ingredients -->
+<!-- <label for=""><b>Ingredients : </b></label>
+    <input class="input" type="text" [(ngModel)]="edit.ingredients" name="ingredients" placeholder="ingredients"><br><br> -->
 
+ <!-- Get input for description -->
+<!-- <label for=""><b>Description : </b></label>
+    <input class="input" type="text" [(ngModel)]="edit.description" name="description" placeholder="description"><br><br> -->
 
-<label for=""><b>Description : </b></label>
-    <input class="input" type="text" [(ngModel)]="edit.description" name="description" placeholder="description"><br><br>
-    <span><img [src]="edit.image" name="image" alt=""></span>
+     <!-- Get input for image -->
+    <!-- <span><img [src]="edit.image" name="image" alt=""></span>
 <label for=""><b>Image : </b></label>
 <input  (change) = "upload($event)"  type="file" class="input" name="image" id="" ><br><br>
 
-<button class="btn" >Upload</button>
 <button class="btn" (click)="save()">Save</button>
 </div>
-</form>
+</form> -->

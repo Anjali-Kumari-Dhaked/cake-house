@@ -1,74 +1,29 @@
 .box{
     height: auto;
-    width: 70vw;
- 
-  margin: 2% auto 5% auto;
-    display: grid;
-    grid-template-rows: auto auto  auto ;
+    width:67vw;
+    margin: 2% auto 5% auto;
   }
   .check{
-    /* border: 1px solid red; */
-    background-color: brown;
-    display: grid;
-    grid-template-columns: 4fr .5fr;
+    background-color: rgb(63, 11, 11);
   }
   .head{
     text-align: center;
-    
     color: white;
-  }
-  
-  .checkout-button{
-    height:40px ;
-    width: 100px;
-    margin: 10px;
-    border: 1px solid white;
-    background-color: brown;
-    color: white;
-    border-radius: 8px;
-  }
-  .checkout-button:hover{
-    background-color: rgb(230, 176, 176);
-    color: brown;
-  }
-  .t{
-    width: 100%;
-    /* border: 1px solid brown; */
-  }
-  th{
-    
-    font-size: 20px;
-  }
-  th, td {
-    padding: 15px;
-    color: brown;
-  }
-  table{
-    /* border: 1px solid brown; */
-    text-align: center;
-  }
-  tr:hover{
-    background-color: rgb(204, 156, 156);
-  }
- .remove{
-   background-color: brown;
-   color: white;
-   border-radius: 5px;
-  
-  }
-  .remove:hover{
-    background-color: rgb(226, 177, 177);
-    color: brown;
-  }
-  .hidden{
+}
+.hidden{
     display:none;
-  }
+ }
   .image{
     height: 100px;
     width: 100px;
+  }  
+  .heading{
+    width: 100%;
+    margin-left: 15%;
   }
-/* .abc{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  border: 1px solid brown;
-} */
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+

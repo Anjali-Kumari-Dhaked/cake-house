@@ -1,4 +1,4 @@
-
+<!-- Sort by price -->
 <div class="box">
 <div class="minmax">
 <button class="btn">Sort By price</button><br>
@@ -6,41 +6,21 @@
   <input type="number" [(ngModel)]="min" name="min">
   <label for="">Max Price</label>
   <input type="number" name="max" id="" [(ngModel)]="max"><br><br>
-  <button (click)="fil()"  class="btnn">Filter</button>
+  <button (click)="fil()" (click)="eitherSort(this.filter)" class="btnn">Filter</button>
 </div>
+<!-- Sorted cake -->
 
-
-
-
-
+<div class="not-found hidden"><img src="../../assets/noresult.png" alt=""></div>
 <div class ="cake--container">
-  <div  *ngFor="let eachCake of filte; let i=index" class="card"  (click)="sendID(i)">
-    <!-- <div class="veg" *ngIf="eachCake.eggless">
-      <div class="square">
-        
-        <div class="circle">
-        
-        </div>
-      </div>
-
-    </div>
-    <div class="non--veg" *ngIf="!eachCake.eggless">
-      <div class="square--nonveg">
-        
-        <div class="circle--nonveg">
-        
-        </div>
-      </div>
-    </div> -->
+  <div  *ngFor="let eachCake of filter    let i=index" class="card"  (click)="sendID(i)">
+  
   <div class="cake--img">
     <img src={{eachCake.image}} class="card-img-top" alt="...">
     </div>
     <div class="card-body">
       <h6 class="card-text">{{eachCake.name}}</h6>
       <h6 class="card-text">Price:{{eachCake.price}}/-</h6>
-     
-      
-    </div>
+     </div>
   </div>
 </div> 
 </div>

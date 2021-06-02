@@ -13,6 +13,7 @@ export class OrderconfirmComponent implements OnInit {
   detail:any={};
   
   constructor(private http: HttpClient , private route:Router, private router:ActivatedRoute,private cs:CommonService, private toast: ToastrService) {
+    //get details of order which user wants to order
     this.cs.order();
     this.detail=this.cs.checkoutDetails;
     console.log(this.detail);
@@ -21,20 +22,19 @@ export class OrderconfirmComponent implements OnInit {
  
   ngOnInit(): void {
   }
+
+  // confirm order
   orderCake() {
-  
-    console.log(this.detail);
+  console.log(this.detail);
     let apiUrl = "https://apifromashu.herokuapp.com/api/addcakeorder";
     this.http.post(apiUrl, this.detail).subscribe(
       (response: any) => {
-  
-        console.log("Order Confirm",response);
+       console.log("Order Confirm",response);
         this.toast.success("Order Successful");
-        
         this.cs.orderconfirm=false;
         this.cs.summary=false;
         this.cs.address=false;
-   this.route.navigate(["/"]);
+        this.route.navigate(["/"]);
       },
       (error:any) => {
         console.log('this is response' + error);

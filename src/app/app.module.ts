@@ -17,7 +17,6 @@ import { SearchingComponent } from './searching/searching.component';
 import { CakedetailsComponent } from './cakedetails/cakedetails.component';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AddCartComponent } from './add-cart/add-cart.component';
-import { FilterComponent } from './filter/filter.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
@@ -28,7 +27,6 @@ import { EditdetailsComponent } from './editdetails/editdetails.component';
 import { MyorderComponent } from './myorder/myorder.component';
 import { SummaryComponent } from './summary/summary.component';
 import { AddressComponent } from './address/address.component';
-import { PaymentComponent } from './payment/payment.component';
 import { OrderconfirmComponent } from './orderconfirm/orderconfirm.component';
 import { CommonService } from './common.service';
 import { CanDeactivateGuardService } from './can-deactivate-guard.service';
@@ -36,6 +34,8 @@ import { AdminAddCakeComponent } from './admin-add-cake/admin-add-cake.component
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { DiscountPipe } from './discount.pipe';
+import { SortPipe } from './sort.pipe';
+import { CanActivateService } from './can-activate.service';
 
  
 @NgModule({
@@ -53,17 +53,16 @@ import { DiscountPipe } from './discount.pipe';
     SearchingComponent,
     CakedetailsComponent,
     AddCartComponent,
-    FilterComponent,
     CheckoutComponent,
     AdminComponent,
     EditdetailsComponent,
     MyorderComponent,
     SummaryComponent,
     AddressComponent,
-    PaymentComponent,
     OrderconfirmComponent,
     AdminAddCakeComponent,
     DiscountPipe,
+    SortPipe,
 ],
   imports: [
     BrowserModule,
@@ -72,14 +71,18 @@ import { DiscountPipe } from './discount.pipe';
     HttpClientModule,
     CommonModule,
     BrowserAnimationsModule, 
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot(
+      {
+        preventDuplicates:true,
+      }
+    ),
     NgxPaginationModule,
     NgxSpinnerModule
    
    
   ],
   providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthinterceptService, multi:true},
-  CommonService, CanDeactivateGuardService],
+  CanActivateService, CanDeactivateGuardService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

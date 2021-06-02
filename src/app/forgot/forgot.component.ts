@@ -8,14 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgot.component.css']
 })
 export class ForgotComponent implements OnInit {
-
   email:any;
-
   constructor(private http: HttpClient, private router: Router) { }
-
   ngOnInit(): void {
   }
 
+  // For recovering password
   forgot () {
     console.log(this.email);
     let apiUrl = "https://apibyashu.herokuapp.com/api/recoverpassword";

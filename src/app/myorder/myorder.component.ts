@@ -11,10 +11,10 @@ import { element } from 'protractor';
 export class MyorderComponent implements OnInit {
  detail:any=[];
   constructor(private http: HttpClient , private route:Router) {
+    //Showing all orders
     let apiUrl = "https://apifromashu.herokuapp.com/api/cakeorders";
     this.http.post(apiUrl, {}).subscribe(
       (response: any) => {
-        // this.toast.success(``);
         console.log('Myorder', response);
         this.detail= response.cakeorders;
         console.log(this.detail);
@@ -32,6 +32,8 @@ export class MyorderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  //showing details of order
 showdetails(id:any){
    document.querySelector(`#cake${id}`)?.classList.toggle("hidden");
    

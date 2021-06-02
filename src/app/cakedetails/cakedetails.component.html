@@ -1,4 +1,6 @@
 <div class="box">
+
+  <!-- Image section -->
 <div class="left">
   <div class="veg" *ngIf="detail.eggless">
     <div class="square">
@@ -13,28 +15,17 @@
     </div>
   </div>
     <img class="img" src="{{detail.image}}" alt="">
-  
-
-
-
-    <!-- <img src="/src/assets/vegi.png" alt="hello"  *ngIf="detail.eggless">
-    <img src="/src/assets/nonveg.png" alt="hi"  *ngIf="!detail.eggless"> -->
-   
 </div>
+
+<!-- Cake details section -->
 <div class="right">
     <div class="right-inner">
      <h3>{{detail.name}}</h3>
-     
-        
         <li>Weight : {{detail.weight}} kg</li><br>
         <li>Flavour : {{detail.flavour}}</li><br>
         <li>Ingredients : {{detail.ingredients}}</li><br>
-        <h5 class="price"><b>Price : </b> {{detail.price}}/-</h5><br>
-       
-        <button  (click)="cart()" class="add fa fa-shopping-cart cart" >  ADD TO CART</button>
-        <!-- <button class="buy" routerLink="/checkout/address">Buy Now</button> -->
-    
+        <h5 class="price"><b>Price : </b> {{detail.price|currency:'INR'}}</h5><br>
+       <button  (click)="cart()" class="add fa fa-shopping-cart cart">  ADD TO CART</button>
+      </div>
 </div>
 </div>
-</div>
-<!-- <input type="file" name="file" [(ngModel)] = "file" (change) = "upload($event)"> -->

@@ -1,37 +1,39 @@
-
-
-
-
 <nav class="navbar">
-  <div ><h3  routerLink="/" class="head">Cake House</h3></div>
+  <!-- WEBSITE NAME -->
+  <div ><h3  routerLink="/" class="head">🎂 Cake House</h3></div>
   <div>
-  
+<!-- Search field -->
  <form action="" class="form">
- 
-  <input type="search" class="search" placeholder="Search....." name="searchCake" [(ngModel)]="searchCake" >
- 
-  <button class=" sea" (click)="search()" type="submit">Search</button>
-
+ <input type="search" class="search" placeholder="Search....." name="searchCake" [(ngModel)]="searchCake" >
+ <button class=" searchbtn fa fa-search" (click)="search()" type="submit"></button>
 </form>
-
 </div>
-<div>
-  <button class="order fa fa-shopping-cart" *ngIf = "!num" routerLink="/add-cart" (click)="cart()"></button> 
-  </div>
-  <div><button  class="order fa fa-user-circle" routerLink="/admin" (click)="cart()" *ngIf = "!num"></button></div>
+
+ <!-- Admin -->
+ <div><button  class="admin fas fa-user-shield font"  routerLink="/admin" (click)="cart()" *ngIf = "!checkLogin &&  adminEmail=='anjalikumari102938@gmail.com'" ></button></div> 
+
   
-    <div> <button class="button" routerLink="/myorder" (click)="cart()" *ngIf = "!num">MyOrder</button></div>
+ <!-- my cart -->
+<div>
+  <button class="cart fa fa-shopping-cart" *ngIf = "!checkLogin" routerLink="/add-cart" (click)="cart()"></button> 
+  </div>
+  
+
+  <!-- my orders -->
+    <div> <button class="myorder" routerLink="/myorder" (click)="cart()" *ngIf = "!checkLogin">MyOrder</button></div>
     
-    <div ><button class="order" *ngIf = "num" routerLink="/login">Login</button> 
-      <button class="order " (click) = "logout()" *ngIf = "!num"  >LogOut
-      </button></div>
+    <!-- login -->
+    <div ><button class="login" *ngIf = "checkLogin" routerLink="/login">Login</button> 
+      
+      <!-- logout -->
+      <button class="login " (click) = "logout()" *ngIf = "!checkLogin"> LogOut</button></div>
 </nav>
 
 
 
 
 
-
+ 
 
 
 

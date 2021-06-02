@@ -1,47 +1,32 @@
 .page{
-  /* border: 1px solid black; */
-  /* box-sizing: border-box;
- margin-top: 75px;
- margin-left: 30%;
- margin:Center; */
- margin: auto auto auto auto;
- width: 33vw;
- height: 72vh;
- background:white 0% 0% no-repeat padding-box;
-
+ margin: 2% auto 5% auto;
+ width: 40vw;
+ height: 85vh;
  border-radius: 10px;
  opacity: 1;
  background-color: rgba(247, 242, 242, 0.959);
  color: rgb(58, 7, 7);
  font-size: 16px;
-
-
 }
 .login-box{
   margin-left: 25px;
   margin-top: 15px;
-  /* border: 1px solid black; */
   display: grid;
   grid-template-rows: 1.5fr 1fr 1fr 1fr 2fr;
   grid-gap: 7vh;
   width: 28vw;
-  height: 60vh;
+  height: 70vh;
 }
 .heading{
   text-align: center;
-  /* color: #9D6AED; */
   font-family: 'Montserrate';
   margin: 5% auto auto auto;
-  /* background-color: yellow; */
 }
 .email{
-  /* background-color: pink; */
   display: grid;
   grid-template-rows: 1fr 1fr;
-  /* grid-gap: 3px; */
 }
 .password{
-  /* background-color: powderblue; */
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
@@ -58,22 +43,23 @@
 }
 
 .input{
-  height: 4vh;
-  width: 28vw;
+  height: 6vh;
+  width: 34vw;
   border-radius: 5px;
 }
 input[type=email] {
-  border: 3px solid rgb(248, 232, 232);
+  border: 1px solid rgb(126, 69, 69);
+  background-color: white;
 }
 input[type=email]:focus {
-  border: 3px solid rgb(241, 234, 234);
+  border: 2px solid rgb(148, 121, 121);
 }
 input[type=password] {
-  border: 3px solid rgb(243, 217, 217);
+  border: 1px solid rgb(139, 102, 102);
 }
 .btn{
-  height: 6vh;
-  width: 28vw;
+  height: 7vh;
+  width: 34vw;
   background-color:rgb(102, 23, 23);
   color: white;
   border-radius: 5px;

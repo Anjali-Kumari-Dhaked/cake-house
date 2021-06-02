@@ -8,9 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Cake House';
-  // traineesdetails=[{name:'Anjali', role:"Trainee"}, {name:"richa", role:"trainee"}]
-  // trainees = ['harshit', 'amar']
-
+ 
   constructor(private http:HttpClient){
     this.http.get("https://apifromashu.herokuapp.com/api/getuserdetails").subscribe((res:any)=>{
       console.log(res);
@@ -18,8 +16,7 @@ export class AppComponent {
     (error:any)=>{
       if(error.ok === false){
         localStorage.clear();
-      }
       console.log(error);
-    })
-  }
-}
+    
+      }});
+}}

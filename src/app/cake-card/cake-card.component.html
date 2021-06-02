@@ -1,6 +1,7 @@
 <div>
 <div class ="cake--container">
-      <div   *ngFor="let eachCake of card  | paginate:{itemsPerPage:20,currentPage:p,totalItems:totalLength} let i=index" class="card"  (click)="sendID(i)" appHighlight>
+    <!-- Cake card -->
+        <div   *ngFor="let eachCake of card ; let i=index" class="card"  (click)="sendID(i)" appHighlight>
          <div class="cake--img">
         <img src={{eachCake.image}} class="card-img-top" alt="...">
         </div>
@@ -10,7 +11,7 @@
          </div>
       </div>
     </div>
-<pagination-controls class="text-center my-pagination" (pageChange)="p=$event"></pagination-controls>
+
 </div>
 
 
@@ -22,43 +23,3 @@
 
 
 
-
-<!-- 
-
-
-
-
-
-
-
-
-<div class ="cake--container">
-  <div  *ngFor="let eachCake of card let i=index" class="card"  (click)="sendID(i)">
-     <div class="veg" *ngIf="eachCake.eggless">
-      <div class="square">
-        
-        <div class="circle">
-        
-        </div>
-      </div>
-
-    </div>
-    <div class="non--veg" *ngIf="!eachCake.eggless">
-      <div class="square--nonveg">
-        
-        <div class="circle--nonveg">
-        
-        </div>
-      </div>
-    </div> -->
-  <!-- <div class="cake--img">
-    <img src={{eachCake.image}} class="card-img-top" alt="...">
-    </div>
-    <div class="card-body">
-      <h6 class="card-text">{{eachCake.name}}</h6>
-      <h6 class="card-text">Price:{{eachCake.price}}/-</h6>
-     
-      
-    </div>
-  </div>
-</div>  -->

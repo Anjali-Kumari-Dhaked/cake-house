@@ -1,12 +1,13 @@
-
-   
+<!-- Shows the items of the cart -->
 <div  class="box">
+  <!-- header -->
   <div class="check">
-  <div ><h1 class="head">Cart Details</h1></div>
+  <div ><h1 class="heading">Cart Details</h1></div>
   <div> <button routerLink="/checkout" class="checkout-button">Checkout</button></div>
 </div>
+ <!-- Table for cart items -->
 <div class="table">
-<table class="t">
+ <table class="table-detail">
   <tr>
     <th>Serial No.</th>
     <th>Name</th>
@@ -22,7 +23,5 @@
     <td><button (click)="remove(i)" class="remove">Remove</button></td>
   </tr>
 </table>
- 
 </div>   
-     
 </div>

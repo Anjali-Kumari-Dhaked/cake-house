@@ -52,7 +52,14 @@
     row-gap: 20px;
 }
 
-
+.hidden{
+    display: none;
+}
+.not-found{
+    height: 500px;
+    width: 700px;
+    margin: 5% auto 5% 20%;
+}
 
 
 

@@ -11,27 +11,28 @@ import { CommonService } from '../common.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements CanComponentDeactivate {
-
-  card: any=[];
+  p:number=1;   //Intial value for pagination
+  totalLength:any;  //Toal length of items for pagination
+  card: any=[];   //Storing all cakes of data
   constructor(public cs: CommonService, private router:Router, private http:HttpClient,private spinner: NgxSpinnerService) {
+    this.spinner.show();
+    //Get the data of all cakes
     let apiUrl = "https://apifromashu.herokuapp.com/api/allcakes";
     this.http.get(apiUrl).subscribe((response:any)=>{
        console.log(response.data[0], "this is response");
-       this.card = response.data
+       if(response){
+        this.spinner.hide();
+       }
+       this.card = response.data;
+      this.totalLength=response.length;
+       console.log(this.totalLength);
     }, (error)=>{
       console.log("this is response"+error);
     })
     }
 
   ngOnInit(): void {
-    /** spinner starts on init */
- this.spinner.show();
-
- setTimeout(() => {
-   /** spinner ends after 5 seconds */
-   this.spinner.hide();
- }, 2000)
-
+  
 }
 canDeactivate(){
   return window.confirm("Do You really want changes?");
@@ -42,13 +43,7 @@ sendID(i:any) {
   this.router.navigate(['/admin/editdetails', i]);
   
 }
+ }
 
-  }
-  // sendID(i:any) {
-  //   console.log("hi");
-  //   this.router.navigate(['/cakedetails', this.card[i].cakeid]);
-    
-  // }
-  
 
 

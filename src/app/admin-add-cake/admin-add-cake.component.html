@@ -1,40 +1,80 @@
-<form action="" class="form">
-    <div class="head">
-    <h1>add Details</h1></div>
-    <div class="h">
-    <label for="name"><b>Name :</b> </label>
-    <input class="input" [(ngModel)]="add.name"  type="text" name="name" id="" placeholder="name"><br><br>
- 
-   <label for=""><b>Price : </b></label>
-    <input class="input" type="text" [(ngModel)]="add.price" name="price" placeholder="price"><br><br>
+<div class="box">
+    <form action="">
+        <div >
+        <h1 class="heading"><em>Add Cake</em></h1></div>
+        <div >
+        <!-- Get input for name -->
+        <label for="name"><h5> Name :</h5> </label>
+        <input  [(ngModel)]="add.name"  type="text" name="name" id="" placeholder=" Enter Name"><br><br>
+    
+        <!-- Get input for price -->
+        <label for=""><h5>Price : </h5></label>
+        <input  type="text" [(ngModel)]="add.price" name="price" placeholder="price"><br><br>
+    
+     <!-- Get input for weight -->
+     <label for=""><h5>Weight : </h5></label>
+        <input  type="text" [(ngModel)]="add.weight" name="weight" placeholder="Weight"><br><br>
+    
+        <!-- Get input for eggless -->
+     <label for=""><h5>Eggless : </h5></label>
+        <input  type="checkbox" [(ngModel)]="add.eggless" name="flavour" placeholder="Flavour"><br><br>
+    
+        <!-- Get input for Ingredients -->
+     <label for=""><h5>Ingredients : </h5></label>
+        <input  type="text" [(ngModel)]="add.ingredients" name="ingredients" placeholder="Ingredients"><br><br>
+    
+        <!-- Get input for Categories -->
+     <label for=""><h5>Categories:</h5></label><br>
+     <select  name="categories" [(ngModel)]="add.categories" >
+        <option [ngValue]="'Birthday Cake'">Birthday cake</option>
+        <option [ngValue]="'Anniversary Cake'">Anniversary cake</option>
+        <option [ngValue]="'General Cake'">General cake</option>
+        <option [ngValue]="'Special cake'">Special cake</option>
+     </select>
+      <br><br>
+    
+     <!-- Get input for description -->
+     <label for=""><h5>Description : </h5></label>
+        <textarea  [(ngModel)]="add.description" name="description" placeholder="Description........"></textarea><br><br>
+    
+  <!-- Get input for image -->
+      <div class="row">
+      <div class="col-25">
+        <label for=""><h5>Image : </h5></label><br>
+      </div>
+      <div class="col-75">
+       
+        <span ><img [src]="add.image" name="image" alt="" class="i" ></span><br>
+    
+       <input  (change) = "upload($event)"  type="file" name="image" id="" >
+      </div>
 
-<label for=""><b>Weight : </b></label>
-    <input class="input" type="text" [(ngModel)]="add.weight" name="weight" placeholder="weight"><br><br>
-
-<label for=""><b>Eggless : </b></label>
-    <input class="input" type="checkbox" [(ngModel)]="add.eggless" name="flavour" placeholder="flavour"><br><br>
-
-<label for=""><b>Ingredients : </b></label>
-    <input class="input" type="text" [(ngModel)]="add.ingredients" name="ingredients" placeholder="ingredients"><br><br>
-
-<label for=""><b>Categories:</b></label><br>
-<select name="categories" [(ngModel)]="add.categories" >
-    <option [ngValue]="'Birthday Cake'">Birthday cake</option>
-    <option [ngValue]="'Anniversary Cake'">Anniversary cake</option>
-    <option [ngValue]="'General Cake'">General cake</option>
-    <option [ngValue]="'Special cake'">Special cake</option>
-</select>
-<br><br>
-
-<label for=""><b>Description : </b></label>
-    <textarea class="input des"  [(ngModel)]="add.description" name="description" placeholder="description"></textarea><br><br>
-
-
-    <span ><img [src]="add.image" name="image" alt="" class="i" ></span><br>
-<label for=""><b>Image : </b></label>
-<input  (change) = "upload($event)"  type="file" class="input" name="image" id="" ><br><br>
-
-<button class="btn" (click)="addCake()">Upload</button>
-<!-- <button class="btn" (click)="save()">Save</button> -->
-</div>
+    </div>
+   </div>
+    <!-- add cake -->
+      <button class="btn" (click)="addCake()">Upload</button>
 </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
